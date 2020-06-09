@@ -6,14 +6,15 @@ function App() {
   const [data, setData] = useState([]);
   const [title, setTitle] = useState("");
 
-
   useEffect(() => {
+    var config = {
+      headers: { "Access-Control-Allow-Origin": "*" },
+    };
+
     const fetchData = async () => {
       const result = await axios(
         "https://cors-anywhere.herokuapp.com/https://work.unimi.it/foProssimiEsami/json/F94",
-        {
-          headers: { "Access-Control-Allow-Origin": "*" },
-        }
+        config
       );
 
       setData(result.data);
