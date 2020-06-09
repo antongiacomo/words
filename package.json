@@ -12,6 +12,7 @@
     "react-scripts": "3.4.1",
     "tailwindcss": "^1.4.6"
   },
+  "homepage": "/Appelli-Unimi",
   "scripts": {
     "build:tailwind": "tailwindcss build src/tailwind.css -o src/tailwind.generated.css",
     "prestart": "npm run build:tailwind",
