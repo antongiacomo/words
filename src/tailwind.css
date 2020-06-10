@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+module.exports = {
+    theme: {
+        extend: {}
+    },
+    variants: {},
+    plugins: [
+        function ({addUtilities}) {
+
+            const extendUnderline = {
+
+                '.underline': {
+                    textDecoration: 'underline',
+                    text-decoration-color: red;
+                },
+            }
+
+            addUtilities(extendUnderline)
+        }
+    ]
+}
