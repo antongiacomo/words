@@ -3,7 +3,7 @@ import moment from "moment";
 
 function Block({ item }) {
   function chiusura(chiusura) {
-    var weigth = "600 border-b-2 pb-0";
+    var weigth = "500 border-b-2 pb-0";
     chiusura = moment().diff(chiusura, "days");
 
     if (chiusura >= -2 && chiusura <= 0) return "border-yellow-" + weigth;
