@@ -22,7 +22,7 @@ function App() {
     const fetchData = async () => {
       const result = await axios(baseUrl + "/mywords", config);
 
-      setData(result.data);
+      setData(result.data.reverse());
       setWord("");
     };
 
