@@ -1,7 +1,11 @@
+
 module.exports = {
   purge: [],
   theme: {
     extend: {
+      screens: {
+        'light-mode': { raw: '(prefers-color-scheme: light)' }
+      },
       colors:{
         'yellow': {
           100: '#FEFCEF',

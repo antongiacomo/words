@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+window.$baseUrl  = 'https://wr.v2.moon-cloud.eu';
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
