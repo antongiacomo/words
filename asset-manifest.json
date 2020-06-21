@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/Words/static/css/main.3966a21d.chunk.css",
-    "main.js": "/Words/static/js/main.c542e1c1.chunk.js",
-    "main.js.map": "/Words/static/js/main.c542e1c1.chunk.js.map",
-    "runtime-main.js": "/Words/static/js/runtime-main.7d8c83a2.js",
-    "runtime-main.js.map": "/Words/static/js/runtime-main.7d8c83a2.js.map",
-    "static/css/2.70e35f80.chunk.css": "/Words/static/css/2.70e35f80.chunk.css",
-    "static/js/2.047a5a73.chunk.js": "/Words/static/js/2.047a5a73.chunk.js",
-    "static/js/2.047a5a73.chunk.js.map": "/Words/static/js/2.047a5a73.chunk.js.map",
-    "index.html": "/Words/index.html",
-    "precache-manifest.cabce22c042698c5fa4924138e7ef850.js": "/Words/precache-manifest.cabce22c042698c5fa4924138e7ef850.js",
-    "service-worker.js": "/Words/service-worker.js",
-    "static/css/2.70e35f80.chunk.css.map": "/Words/static/css/2.70e35f80.chunk.css.map",
-    "static/css/main.3966a21d.chunk.css.map": "/Words/static/css/main.3966a21d.chunk.css.map",
-    "static/js/2.047a5a73.chunk.js.LICENSE.txt": "/Words/static/js/2.047a5a73.chunk.js.LICENSE.txt"
+    "main.css": "/words/static/css/main.3966a21d.chunk.css",
+    "main.js": "/words/static/js/main.857e2c05.chunk.js",
+    "main.js.map": "/words/static/js/main.857e2c05.chunk.js.map",
+    "runtime-main.js": "/words/static/js/runtime-main.589ff8bc.js",
+    "runtime-main.js.map": "/words/static/js/runtime-main.589ff8bc.js.map",
+    "static/css/2.70e35f80.chunk.css": "/words/static/css/2.70e35f80.chunk.css",
+    "static/js/2.047a5a73.chunk.js": "/words/static/js/2.047a5a73.chunk.js",
+    "static/js/2.047a5a73.chunk.js.map": "/words/static/js/2.047a5a73.chunk.js.map",
+    "index.html": "/words/index.html",
+    "precache-manifest.10f5bf252962f333bbbf939baf16cf40.js": "/words/precache-manifest.10f5bf252962f333bbbf939baf16cf40.js",
+    "service-worker.js": "/words/service-worker.js",
+    "static/css/2.70e35f80.chunk.css.map": "/words/static/css/2.70e35f80.chunk.css.map",
+    "static/css/main.3966a21d.chunk.css.map": "/words/static/css/main.3966a21d.chunk.css.map",
+    "static/js/2.047a5a73.chunk.js.LICENSE.txt": "/words/static/js/2.047a5a73.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.7d8c83a2.js",
+    "static/js/runtime-main.589ff8bc.js",
     "static/css/2.70e35f80.chunk.css",
     "static/js/2.047a5a73.chunk.js",
     "static/css/main.3966a21d.chunk.css",
-    "static/js/main.c542e1c1.chunk.js"
+    "static/js/main.857e2c05.chunk.js"
   ]
 }
