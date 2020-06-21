@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Words/static/css/main.3966a21d.chunk.css",
+    "main.js": "/Words/static/js/main.c542e1c1.chunk.js",
+    "main.js.map": "/Words/static/js/main.c542e1c1.chunk.js.map",
+    "runtime-main.js": "/Words/static/js/runtime-main.7d8c83a2.js",
+    "runtime-main.js.map": "/Words/static/js/runtime-main.7d8c83a2.js.map",
+    "static/css/2.70e35f80.chunk.css": "/Words/static/css/2.70e35f80.chunk.css",
+    "static/js/2.047a5a73.chunk.js": "/Words/static/js/2.047a5a73.chunk.js",
+    "static/js/2.047a5a73.chunk.js.map": "/Words/static/js/2.047a5a73.chunk.js.map",
+    "index.html": "/Words/index.html",
+    "precache-manifest.cabce22c042698c5fa4924138e7ef850.js": "/Words/precache-manifest.cabce22c042698c5fa4924138e7ef850.js",
+    "service-worker.js": "/Words/service-worker.js",
+    "static/css/2.70e35f80.chunk.css.map": "/Words/static/css/2.70e35f80.chunk.css.map",
+    "static/css/main.3966a21d.chunk.css.map": "/Words/static/css/main.3966a21d.chunk.css.map",
+    "static/js/2.047a5a73.chunk.js.LICENSE.txt": "/Words/static/js/2.047a5a73.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7d8c83a2.js",
+    "static/css/2.70e35f80.chunk.css",
+    "static/js/2.047a5a73.chunk.js",
+    "static/css/main.3966a21d.chunk.css",
+    "static/js/main.c542e1c1.chunk.js"
+  ]
+}
