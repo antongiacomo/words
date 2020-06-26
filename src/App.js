@@ -4,11 +4,11 @@ import "./tailwind.generated.css";
 import NewItemCard from "./NewItemCard";
 import Search from "./Seach";
 import ItemCard from "./ItemCard";
-import { ToastProvider, useToasts } from "react-toast-notifications";
+
 
 //
 function App() {
-  const { addToast } = useToasts();
+
 
   const [data, setData] = useState([]);
   const [title, setTitle] = useState([""]);
