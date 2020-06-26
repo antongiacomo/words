@@ -1,15 +1,21 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-
-import App from './App';
-import * as serviceWorker from './serviceWorker';
-window.$baseUrl  = process.env.REACT_APP_BASE_URL ?? "http://localhost:3000"
+import React from "react";
+import ReactDOM from "react-dom";
+import { ToastProvider } from "react-toast-notifications";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+window.$baseUrl = process.env.REACT_APP_BASE_URL ?? "http://localhost:3000";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ToastProvider
+      autoDismiss
+      autoDismissTimeout={2000}
+      placement="bottom-center"
+    >
+      <App />
+    </ToastProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want your app to work offline and load faster, you can change

@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
-import Flippy, { FrontSide, BackSide } from "react-flippy";
+import Flippy, { FrontSide } from "react-flippy";
 import Autocomplete from "./Autocomplete";
 import axios from "axios";
-
+import { ToastProvider, useToasts } from "react-toast-notifications";
 function NewItemCard({ word, handleWord, handleLoaded }) {
   const baseUrl = window.$baseUrl;
   const [data, setData] = useState([]);
   const [q, setQ] = useState("");
+  const { addToast } = useToasts();
 
   const handleQ = (word) => {
     setQ(word);
@@ -59,9 +60,13 @@ function NewItemCard({ word, handleWord, handleLoaded }) {
 
               <button
                 onClick={() =>
-                  axios(baseUrl + "/add/" + word).then((response) =>
-                    handleLoaded(response)
-                  )
+                  axios(baseUrl + "/add/" + word).then((response) => {
+                    addToast(word + " Saved Successfully", {
+                      appearance: "success",
+                    });
+                    handleLoaded(response);
+                    handleQ("");
+                  })
                 }
                 className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded"
                 type="button"
@@ -71,16 +76,13 @@ function NewItemCard({ word, handleWord, handleLoaded }) {
               <button
                 className="flex-shrink-0 border-transparent border-4 text-teal-500 hover:text-teal-800 text-sm py-1 px-2 rounded"
                 type="button"
-                onClick={() => handleWord("")}
+                onClick={() => handleQ("")}
               >
                 Cancel
               </button>
             </div>
           </form>
         </FrontSide>
-        <BackSide className="lg:w-1/4 md:w-1/3 sm:w-1/2 w-full p-4 relative">
-          <p>GO BACK</p>
-        </BackSide>
       </Flippy>
     </>
   );

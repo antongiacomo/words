@@ -5,11 +5,8 @@ import NewItemCard from "./NewItemCard";
 import Search from "./Seach";
 import ItemCard from "./ItemCard";
 
-
 //
 function App() {
-
-
   const [data, setData] = useState([]);
   const [title, setTitle] = useState([""]);
   const [filter, setFilter] = useState([]);
