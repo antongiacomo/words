@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Flippy, { FrontSide } from "react-flippy";
 import Autocomplete from "./Autocomplete";
 import axios from "axios";
-import { ToastProvider, useToasts } from "react-toast-notifications";
+import { useToasts } from "react-toast-notifications";
 function NewItemCard({ word, handleWord, handleLoaded }) {
   const baseUrl = window.$baseUrl;
   const [data, setData] = useState([]);

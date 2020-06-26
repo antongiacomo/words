@@ -1,5 +1,6 @@
 {
   "short_name": "Words",
+  "description": "Hi Folks!",
   "name": "Words: Expand Your Dictionary",
   "icons": [
     {
@@ -19,7 +20,7 @@
     }
   ],
   "start_url": "./words",
-  "display": "standalone",
+  "display": "fullscreen",
   "theme_color": "#38B2AC",
   "background_color": "#ffffff"
 }
