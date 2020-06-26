@@ -6,12 +6,14 @@ import axios from "axios";
 function clear(text){
   return text.trim().replace(/⇒/gi, "");
 }
-function ItemCard({ item, setLoaded }) {
+function ItemCard({ item, setLoaded,className }) {
   //const [flippy, setFlippy] = useState();
   const baseUrl = window.$baseUrl;
   let flippy;
   return (
+    <div  className={className}>
     <Flippy
+
       flipOnClick={false}
       ref={(r) => (flippy = r)}
       flipDirection="horizontal"
@@ -48,11 +50,11 @@ function ItemCard({ item, setLoaded }) {
         </p>
         <div className="flex flex-wrap space-x-2">
           {item.translations[0] &&
-            item.translations[0].translations.map((item) => {
+            item.translations[0].translations.map((item, key) => {
               return (
                 <>
-                  <p>{clear(item.to)}</p>
-                  <p>●</p>
+                  <p key={`1${item.to}${key}`}>{clear(item.to)}</p>
+                  <p key={`2${item.to}${key}`}>●</p>
                 </>
               );
             })}
@@ -61,9 +63,9 @@ function ItemCard({ item, setLoaded }) {
           {item.translations[1] && item.translations[1].title}
         </p>
         {item.translations[1] &&
-          item.translations[1].translations.map((item) => {
+          item.translations[1].translations.map((item,key) => {
             return (
-              <p>
+              <p key={`3${item.to}${key}`}>
                 {clear(item.from)} ⮕ {clear(item.to)}
               </p>
             );
@@ -78,6 +80,7 @@ function ItemCard({ item, setLoaded }) {
         </div>
       </BackSide>
     </Flippy>
+    </div>
   );
 }
 export default ItemCard;

@@ -1,12 +1,17 @@
 import React from "react";
-
+import icon from "./logo512.png"
 function Search({title,handleTitle,filter,handleFilter}){
   return(
 <>
-    <div className="w-full h-10 px-8">
+
+    <div className="flex flex-no-wrap h-10 px-8">
+
+        <img src={icon} className="h-full inline-block mr-2" alt="Logo" />
+
+
     <input
       placeholder="Search..."
-      className="w-full  h-full border py-2 px-4 rounded-lg shadow bg-transparent"
+      className="w-full   h-full border py-2 px-4 rounded-lg shadow bg-transparent"
       onChange={(event) =>
         handleTitle(event.target.value.toLowerCase().split("&"))
       }
@@ -20,6 +25,9 @@ function Search({title,handleTitle,filter,handleFilter}){
         }
       }}
     />
+      <div className="w-32 flex justify-center items-center">
+    casa | casa
+  </div>
   </div>
   <div className="flex px-8 flex-wrap space-x-2">
     {filter.map((f) => {
@@ -43,7 +51,9 @@ function Search({title,handleTitle,filter,handleFilter}){
         </span>
       );
     })}
+
   </div>
+
 </>
   )
 }
