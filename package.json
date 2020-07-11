@@ -21,7 +21,7 @@
     "react-toast-notifications": "^2.4.0",
     "tailwindcss": "^1.4.6"
   },
-  "homepage": "/words",
+  "homepage": "./words",
   "scripts": {
     "build:tailwind": "postcss src/tailwind.css -o src/tailwind.generated.css",
     "watch:tailwind": "postcss -w src/tailwind.css -o src/tailwind.generated.css",

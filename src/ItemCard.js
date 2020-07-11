@@ -73,33 +73,32 @@ function ItemCard({ item, setLoaded, className }) {
           style={{ backgroundColor: "#319795" }}
         >
           <div className="h-full w-full p-2 pb-4">
-          <div className="absolute left-0 top-0 px-4 py-2 ">
-            <span
-              className="text-sm cursor-pointer text-gray-400 upper">
-            <svg
-              onClick={() => flippy.toggle()}
-              xmlns="http://www.w3.org/2000/svg"
-              class=" cursor-pointer icon icon-tabler icon-tabler-arrow-back-up"
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="#ffffff"
-              fill="none"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" />
-              <path d="M9 13l-4 -4l4 -4m-4 4h11a4 4 0 0 1 0 8h-1" />
-            </svg>
-            </span>
+            <div className="absolute left-0 top-0 px-4 py-2 ">
+              <span className="text-sm cursor-pointer text-gray-400 upper">
+                <svg
+                  onClick={() => flippy.toggle()}
+                  xmlns="http://www.w3.org/2000/svg"
+                  class=" cursor-pointer icon icon-tabler icon-tabler-arrow-back-up"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="#ffffff"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" />
+                  <path d="M9 13l-4 -4l4 -4m-4 4h11a4 4 0 0 1 0 8h-1" />
+                </svg>
+              </span>
             </div>
             <div class="h-full mt-2 overflow-y-scroll">
               {item.translations.slice(0, 2).map((item, key) => {
                 return (
                   <>
                     <p className="font-bold my-1 mt-2 text-teal-300">
-                      {item.title}
+                      {item.translations[key] && item.title}
                     </p>
                     {item.translations[key] &&
                       item.translations.map((item) => {
