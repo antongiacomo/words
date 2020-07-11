@@ -15,6 +15,7 @@ function ItemCard({ item, setLoaded, className }) {
         flipOnClick={false}
         ref={(r) => (flippy = r)}
         flipDirection="horizontal"
+        style={{willChange: "transform"}}
       >
         <FrontSide
           className="bg-teal-500 flex items-center justify-center content-around w-full h-full p-4 rounded-lg shadow  capitalize text-3xl"
