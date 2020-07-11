@@ -48,7 +48,7 @@ function App() {
         handleTitle={setTitle}
       ></Search>
       <div className="flex flex-wrap p-4">
-        <div className="xl:w-1/4 lg:w-1/3 md:w-1/2 w-full p-4 relative" key="0">
+        <div className="xl:w-1/3 lg:w-1/3 md:w-1/2 w-full p-4 relative" key="0">
           <NewItemCard
             word={word}
             handleLoaded={setLoaded}
@@ -60,7 +60,7 @@ function App() {
           .map((item, index) => {
             return (
               <ItemCard
-                className="xl:w-1/4 lg:w-1/3 md:w-1/2 w-full p-4 relative"
+                className="xl:w-1/3 lg:w-1/3 md:w-1/2 w-full p-4 relative"
                 item={item}
                 key={`${item.word}${index}`}
                 setLoaded={setLoaded}
