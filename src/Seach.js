@@ -6,7 +6,7 @@ function Search({ title, handleTitle, filter, handleFilter }) {
       <div className="flex flex-no-wrap h-10 px-8 z-50 relative">
         <img src={icon} className="h-full inline-block mr-2" alt="Logo" />
         <input
-          placeholder="Search..."
+          placeholder="Filter..."
           className="w-full   h-full py-2 px-4 shadow bg-gray-900  rounded-lg"
           onChange={(event) =>
             handleTitle(event.target.value.toLowerCase().split("&"))
