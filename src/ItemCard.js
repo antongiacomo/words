@@ -19,7 +19,7 @@ function ItemCard({ item, setLoaded, className }) {
       >
         <FrontSide
           className="bg-teal-500 flex items-center justify-center content-around w-full h-full p-4 rounded-lg shadow  capitalize text-3xl"
-          style={{ height: "300px", backgroundColor: "#319795" }}
+          style={{ height: "300px", backgroundColor: "#319795", backgroundImage:"linear-gradient(38deg ,#38B2AC  50%, #319795 50%)" }}
         >
           <div className="absolute right-0 top-0 px-4 py-2 ">
             <span
