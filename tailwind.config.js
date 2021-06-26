@@ -1,3 +1,4 @@
+const colors = require('tailwindcss/colors')
 
 module.exports = {
   purge: [],
@@ -7,6 +8,7 @@ module.exports = {
         'light-mode': { raw: '(prefers-color-scheme: light)' }
       },
       colors:{
+        teal: colors.teal,
         'yellow': {
           100: '#FEFCEF',
           200: '#FEF6D6',

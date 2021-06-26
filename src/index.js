@@ -8,6 +8,7 @@ window.$baseUrl = process.env.REACT_APP_BASE_URL ?? "http://localhost:3000";
 ReactDOM.render(
   <React.StrictMode>
     <ToastProvider
+
       autoDismiss
       autoDismissTimeout={2000}
       placement="bottom-center"

@@ -20,7 +20,7 @@ function App() {
     };
 
     const fetchData = async () => {
-      const result = await axios(baseUrl + "/mywords", config);
+      const result = await axios(baseUrl + "/list", config);
 
       setData(result.data.reverse());
       setWord("");
@@ -47,8 +47,8 @@ function App() {
         handleFilter={setFilter}
         handleTitle={setTitle}
       ></Search>
-      <div className="flex flex-wrap p-4">
-        <div className="xl:w-1/3 lg:w-1/3 md:w-1/2 w-full p-4 relative" key="0">
+      <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 lg:gird-cols-3 md:grid-cols-2  grid-cols-1   p-4">
+        <div key="base" className="w-full p-4 relative" >
           <NewItemCard
             word={word}
             handleLoaded={setLoaded}
@@ -60,9 +60,10 @@ function App() {
           .map((item, index) => {
             return (
               <ItemCard
-                className="xl:w-1/3 lg:w-1/3 md:w-1/2 w-full p-4 relative"
+                key={`card${index}`}
+                className=" w-full p-4 relative"
                 item={item}
-                key={`${item.word}${index}`}
+
                 setLoaded={setLoaded}
               ></ItemCard>
             );

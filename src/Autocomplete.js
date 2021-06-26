@@ -9,13 +9,17 @@ export default function Autocomplete(props) {
   const searchRef = useRef();
   const suggestionRef = useRef();
 
-  useRect(searchRef, true, (rect) => {
-    console.log(hasFocus)
-    if (suggestionRef.current && rect) {
-      suggestionRef.current.style.left = rect.left + "px";
-      suggestionRef.current.style.top = rect.top + rect.height + "px";
-      suggestionRef.current.style.width = rect.width + "px";
+  useRect(searchRef, {
+    onChange(rect){
+
+      console.log(hasFocus)
+      if (suggestionRef.current && rect) {
+        suggestionRef.current.style.left = rect.left + "px";
+        suggestionRef.current.style.top = rect.top + rect.height + "px";
+        suggestionRef.current.style.width = rect.width + "px";
+      }
     }
+
   });
 
   const handleKeyPress = (e) => {
@@ -66,6 +70,7 @@ export default function Autocomplete(props) {
                 props.suggestions.map((suggestion, i) => {
                   return (
                     <div
+                      key={`${suggestion}${i}`}
                       onClick={() => {
                         props.onSelect(suggestion);
                         setHasFocus(false);

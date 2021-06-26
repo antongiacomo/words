@@ -10,7 +10,7 @@ function ItemCard({ item, setLoaded, className }) {
   const baseUrl = window.$baseUrl;
   let flippy;
   return (
-    <div className={className}>
+    <div className={className} >
       <Flippy
         flipOnClick={false}
         ref={(r) => (flippy = r)}
@@ -18,12 +18,14 @@ function ItemCard({ item, setLoaded, className }) {
         style={{willChange: "transform"}}
       >
         <FrontSide
-          className="bg-teal-500 flex items-center justify-center content-around w-full h-full p-4 rounded-lg shadow  capitalize text-3xl"
-          style={{ height: "300px", backgroundColor: "#319795", backgroundImage:"linear-gradient(38deg ,#38B2AC  50%, #319795 50%)" }}
+          className="bg-teal-500 flex items-center justify-center content-around w-full h-full p-4 rounded-lg shadow  capitalize text-3xl
+bg-gradient-to-tr from-teal-500 to-teal-800
+          "
+          style={{ height: "300px", backgroundImage: "linear-gradient(to top right, var(--tw-gradient-stops))"}}
         >
           <div className="absolute right-0 top-0 px-4 py-2 ">
             <span
-              className="text-sm cursor-pointer text-gray-400 upper"
+              className="text-sm cursor-pointer text-gray-200 upper"
               onClick={() => {
                 if (
                   window.confirm("Are you sure you wish to delete this item?")
@@ -35,14 +37,14 @@ function ItemCard({ item, setLoaded, className }) {
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="icon icon-tabler icon-tabler-trash stroke-current"
+                className="icon icon-tabler icon-tabler-trash stroke-current"
                 width="22"
                 height="22"
                 viewBox="0 0 24 24"
-                stroke-width="2"
+                strokeWidth="2"
                 fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               >
                 <path stroke="none" d="M0 0h24v24H0z" />
                 <line x1="4" y1="7" x2="20" y2="7" />
@@ -54,7 +56,7 @@ function ItemCard({ item, setLoaded, className }) {
             </span>
           </div>
           <span
-            className="cursor-pointer text-gray-400"
+            className="cursor-pointer text-gray-200"
             onClick={() => flippy.toggle()}
           >
             {" "}
@@ -79,22 +81,22 @@ function ItemCard({ item, setLoaded, className }) {
                 <svg
                   onClick={() => flippy.toggle()}
                   xmlns="http://www.w3.org/2000/svg"
-                  class=" cursor-pointer icon icon-tabler icon-tabler-arrow-back-up"
+                  className=" cursor-pointer icon icon-tabler icon-tabler-arrow-back-up"
                   width="22"
                   height="22"
                   viewBox="0 0 24 24"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   stroke="#ffffff"
                   fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 >
                   <path stroke="none" d="M0 0h24v24H0z" />
                   <path d="M9 13l-4 -4l4 -4m-4 4h11a4 4 0 0 1 0 8h-1" />
                 </svg>
               </span>
             </div>
-            <div class="h-full mt-2 overflow-y-scroll">
+            <div className="h-full mt-2 overflow-y-scroll">
               {item.translations.slice(0, 2).map((item, key) => {
                 return (
                   <>
