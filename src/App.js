@@ -20,7 +20,7 @@ function App() {
     };
 
     const fetchData = async () => {
-      const result = await axios(baseUrl + "/list", config);
+      const result = await axios(baseUrl + "list", config);
 
       setData(result.data.reverse());
       setWord("");
