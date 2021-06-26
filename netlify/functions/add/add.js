@@ -1,5 +1,6 @@
 // Docs on event and context https://www.netlify.com/docs/functions/#the-handler-method
-const wr = require("wordreference-api");
+const wr = require('wordref');
+
 const MongoClient = require("mongodb").MongoClient;
 const mongoUrl =
   "mongodb+srv://wordreference:UKrRo76ap5acsurW@cluster0-dcyel.mongodb.net/mydb?retryWrites=true&w=majority";

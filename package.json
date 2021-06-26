@@ -21,7 +21,7 @@
     "react-scripts": "4.0.1",
     "react-toast-notifications": "^2.4.0",
     "tailwindcss": "^2.2.4",
-    "wordreference-api": "^1.1.0"
+    "wordref": "^1.0.0"
   },
   "homepage": "/words",
   "scripts": {
