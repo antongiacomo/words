@@ -61,12 +61,15 @@ function NewItemCard({ word, handleWord, handleLoaded }) {
 
               <button
                 onClick={() =>
-                  axios(baseUrl + "/add/" + word).then((response) => {
+                  axios(baseUrl + "add?word=" + word).then((response) => {
                     addToast(word + " Saved Successfully", {
                       appearance: "success",
                     });
                     handleLoaded(response);
                     handleQ("");
+                  }).catch(error => {
+                    alert("woops")
+
                   })
                 }
                 className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-2 text-white py-1 px-2 rounded"

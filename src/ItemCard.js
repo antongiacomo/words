@@ -31,7 +31,7 @@ bg-gradient-to-tr from-teal-500 to-teal-800
                   window.confirm("Are you sure you wish to delete this item?")
                 )
                   axios
-                    .delete(baseUrl + "/remove/" + item.word)
+                    .delete(baseUrl + "delete?word=" + item.word)
                     .then((response) => setLoaded(response));
               }}
             >

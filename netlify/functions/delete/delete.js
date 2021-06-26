@@ -13,26 +13,17 @@ const handler = async (event) => {
 
     const db = client.db("mydb").collection(COLLECTION);
 
-    const word = event.queryStringParameters.word;
 
-    const result = await wr(word, "en", "it");
-    db.insertOne(result, function (err, response) {
-      if (err) {
-        if (err.name === "MongoError" && err.code === 11000) {
-          console.log("word alredy stored");
-        } else {
-          throw err;
-        }
-      }
+    var myquery = { word: event.queryStringParameters.word };
+    await db.deleteOne(myquery, function (err, obj) {
+      if (err) throw err;
+      console.log("1 document deleted");
 
     });
 
+
     return {
-      statusCode: 200,
-      body: JSON.stringify(result),
-      // // more keys you can return:
-      // headers: { "headerName": "headerValue", ... },
-      // isBase64Encoded: true,
+      statusCode: 204,
     };
   } catch (error) {
     return { statusCode: 500, body: error.toString() };
